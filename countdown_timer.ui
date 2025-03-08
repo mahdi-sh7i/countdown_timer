@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>countdown_timer</class>
+ <widget class="QMainWindow" name="countdown_timer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>408</width>
+    <height>339</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_reset">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+QPushButton:disabled {
+    color: rgba(190, 190, 190, 0.7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_start">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>250</y>
+      <width>110</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+QPushButton:disabled {
+    color: rgba(190, 190, 190, 0.7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_pause">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>250</y>
+      <width>109</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+QPushButton:disabled {
+    color: rgba(190, 190, 190, 0.7);
+}</string>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_countdown">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</y>
+      <width>342</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Trebuchet MS</family>
+      <pointsize>55</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>00:00:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinbox_hours">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="specialValueText">
+     <string/>
+    </property>
+    <property name="accelerated">
+     <bool>false</bool>
+    </property>
+    <property name="showGroupSeparator" stdset="0">
+     <bool>false</bool>
+    </property>
+    <property name="maximum">
+     <number>99</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hours">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hours</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinbox_mins">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>60</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_mins">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>10</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Mins</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinbox_secs">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>60</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_secs">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Secs</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>411</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pic/photo_2025-03-01_13-42-24.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>btn_reset</zorder>
+   <zorder>btn_start</zorder>
+   <zorder>btn_pause</zorder>
+   <zorder>label_countdown</zorder>
+   <zorder>spinbox_hours</zorder>
+   <zorder>label_hours</zorder>
+   <zorder>spinbox_mins</zorder>
+   <zorder>label_mins</zorder>
+   <zorder>spinbox_secs</zorder>
+   <zorder>label_secs</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>408</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
