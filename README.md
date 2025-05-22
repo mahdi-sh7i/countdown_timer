@@ -1,9 +1,10 @@
-# countdown_timer
-Sure! Here’s a README.md template that briefly explains how your countdown timer code works. You can customize it based on the specific details of your implementation.
-
 # Countdown Timer
 
 This repository contains a simple countdown timer application built using PyQt5 and Pygame. The application allows users to set a countdown time and provides visual feedback as the timer counts down. When the timer reaches zero, a sound notification is played.
+
+# Previwe
+
+
 
 ## Overview
 
