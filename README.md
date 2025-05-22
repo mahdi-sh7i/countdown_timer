@@ -4,6 +4,7 @@ This repository contains a simple countdown timer application built using PyQt5 
 
 # Previwe
 
+![7](https://github.com/user-attachments/assets/fb578027-72c7-401f-94d7-f3070cf99ff7)
 
 
 ## Overview
